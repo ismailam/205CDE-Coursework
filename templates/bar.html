@@ -1,0 +1,214 @@
+{% extends "base.html" %}
+{% block content %}
+
+
+
+      
+      <div id="carousel-example-generic" class="carousel slide" data-ride="carousel" >
+     
+      <ol class="carousel-indicators">
+        <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+        <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+        <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+      </ol>
+     
+      <!-- Wrapper for slides -->
+      <div class="carousel-inner">
+        <div class="item active" >
+          <img src="static/images/carousel1.jpg" class="img-responsive"  id = "header-image" alt = "Responsive image">
+          <div class="carousel-caption">
+            <h1 class="animated fadeInLeftBig" id = "carousel-header">Welcome to <span><a><img src="static/images/fiverr.png" class = "heta-img"  alt=""></a></span></h1>
+             
+          </div>
+
+        </div>
+        <div class="item" >
+          <img src="static/images/carousel3.jpg" class="img-responsive"  id = "header-image" alt = "Responsive image">
+          <div class="carousel-caption" >
+             <h1 class="animated fadeInLeftBig" id = "carousel-header">Join Our <span id = "carousel-heta">Team</span></h1>
+              
+              <a href="{{ url_for('signup') }}" class="btn btn-primary btn-rw ">Join</a>
+          </div>
+        </div>
+        <div class="item" >
+          <img src="static/images/carousel2.jpg" class="img-responsive"  id = "header-image" alt = "Responsive image">
+          <div class="carousel-caption">
+             <h1 class="wow fadeInLeftBig" id = "carousel-header"> Support Our <span id = "carousel-heta" > Cause</span></h1>
+              
+               <div class="row carousel-donate" > 
+                        <div class="col-sm-4 col-sm-offset-4 text-center" id = "donate-share">
+                            <a href= "{{ url_for('donate') }}" class="btn btn-rw btn-primary btn-radius wow  fadeInLeftBig">Donate <i class="fa fa-credit-card"></i></a>
+                            <a href="{{ url_for('donate') }}" class="btn btn-rw btn-primary btn-radius wow fadeInRightBig" >Share <i class="fa fa-share-alt"></i></a>
+                        </div>
+                    </div>
+          </div>
+        </div>
+      </div>
+     
+      <!-- Controls -->
+      <a class="left carousel-control" id = "left-carousel" href="#carousel-example-generic" role="button" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left"></span>
+      </a>
+      <a class="right carousel-control" id = "right-carousel" href="#carousel-example-generic" role="button" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right"></span>
+      </a>
+
+    </div>
+
+    
+ <!-- Carousel -->
+
+      <!-- <img src="static/images/image5.jpg" class="img-responsive"  id = "header-image" alt = "Responsive image">
+       
+     </div>-->
+
+
+
+
+     <!-- End of ist large banner
+                     image wrapper-->
+                     
+    <div class = "divider"></div>  
+    
+    <!-- Start of
+                        Container -->
+      <div class = "container">
+          <div class = "row intro-row">
+              <div class=" col-sm-4">
+                    <div class="services-box">
+                        <i class="ion-ios-color wow zoomIn"><img src="static/images/children.png"></img></i>
+                        <h1>Children</h1>
+                        <p>
+                            There is so much hatred and negativity posted by people on cute baby pictures.
+                        </p>
+                    </div>
+                </div><!--services box-->
+                <div class=" col-sm-4">
+                    <div class="services-box">
+                        <i class="ion-heart-broken wow zoomIn"></i>
+                        <h1>Depression</h1>
+                        <p>
+                            People get depressed by reading negative comments on social media .
+                        </p>
+                    </div>
+                </div><!--services box-->
+                <div class=" col-sm-4">
+                    <div class="services-box">
+                        <i class="ion-social-twitter-outline wow zoomIn"></i>
+                        <h1>Social Media</h1>
+                        <p>
+                            Social Media has become a dump for negative comments
+                        </p>
+                    </div>
+                    
+                </div><!--services box-->
+          </div>
+          
+      </div> 
+     <!-- End of 
+                 Container -->
+                        
+                        
+    <!-- Start of 
+                Panel container -->
+                
+    <div class = "container">
+                <div class = "row">
+                    <div class = "col-sm-12">
+                        <div class = "heading">
+                            <h4 id = "heading"> About Us</h4>
+                        </div>
+                    </div>
+                    
+                </div>
+                
+                <div class = "row" id = "panel">
+                    <div class = "col-sm-6" style = "visibility: visible;">
+                        <div class="panel-group">
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <h4 class = "panel-title">
+                                        <a>we have over <b>30+</b> features</a>
+                                    </h4>
+                                </div>
+                                
+                                <div id = "collapse-one">
+                                    <div class = "panel-body">Heta is a project started by Coventry University students. 
+Heta was started because the Internet has become a dump for negativity, People get depressed by reading negative comments on social media and There are people who post negative comments on baby videos.
+
+We noticed that a lot of people are afraid to visit comments section on social media because of the negativity posted by others. 
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                   
+                                </div>
+                                
+                            </div>
+                            
+                            
+                            
+                            <div class = "text-center" style = "padding-top: 20px">
+                                
+                                <a href="ourproject.html" class = "btn btn-rw btn-primary">
+                                    About us
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    
+                    
+                    <div class = "col-sm-6">
+                        <img src="static/images/showcase.png" class="img-responsive showcase-image wow fadeInRightBig" alt="Responsive Showcase 2">
+                        
+                    </div>
+                    
+                </div>
+    </div>
+    <!--end of container-->
+    
+     <div class = "divider"></div> 
+    <!-- landing page-->
+                
+                <!-- Start of Support 
+                            Our Cause-->
+                            
+            <section class="support-ourcause">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-8 col-md-offset-2 text-center" >
+                            <h3 class="wow fadeInRightBig">Support Our Cause</h3>
+                            
+                        </div>
+                    </div><!--row-->
+                    
+          <!-- Donate now and 
+                                  Share button -->
+                    <div class="row">
+                        <div class="col-sm-4 col-sm-offset-4 text-center" id = "donate-share">
+                            <a href="{{ url_for('donate') }}" class="btn btn-rw btn-primary btn-radius wow fadeInLeftBig donateshare-p">Donate <i class="fa fa-credit-card"></i></a>
+                            <a href="{{ url_for('support') }}" class="btn btn-rw btn-primary btn-radius wow fadeInRightBig" >Share <i class="fa fa-share-alt"></i></a>
+                        </div>
+                    </div>
+          
+          <!-- End of Donate now and 
+                                  Share button -->
+                    
+                </div>
+            </section>
+        
+        <!-- End of Support 
+                            Our Cause-->
+            
+
+{% endblock %}
+   
+            
+             
+                
+                
+   

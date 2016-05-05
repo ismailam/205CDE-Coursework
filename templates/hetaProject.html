@@ -1,0 +1,203 @@
+{% extends "base.html" %}
+{% block content %}
+
+
+    
+  <section  class=" page-tree-bg">
+            <div class="container">
+                <h3 class="page-tree-text">
+                    About us
+                </h3>
+            </div>
+    </section><!--page tree end here-->
+    
+    <!-- Start of
+                        Container -->
+      
+
+
+
+     <!-- End of 
+                 Container -->
+    
+     <div class = "divider"></div> 
+    <!-- landing page-->
+
+  <div class="container">
+      <div class="row">
+
+        <div class="col-md-6">
+                
+     
+    
+     
+      <!-- Wrapper for slides -->
+        <div class="aboutus-box">
+          <div class="aboutus-image" >
+            <img src="static/images/aboutus.jpg" class="img-project wow fadeInLeft"  alt = "Responsive image">
+           
+
+          </div>
+        </div>
+     
+      <!-- Controls -->
+
+        </div>
+
+
+
+
+
+
+
+        <div class="col-md-6">
+
+          <h4 class="heading-mini">About Heta</h4>
+          <p>
+            ArtficialHeta is an artficial intelligence which will be release on social media on December 2016. It will learn how humans communicate on social media. It will be able to separate negativity from positivity and everyone will be able to choose whether they want to have negativity. Heta identifies negativity with spelling errors by correcting them and taking them out. Missed out Negativity can be reported and will be added. Missed out Negativity or new words can be reported and they will be added to Heta dictionary.
+
+          </p>
+
+          
+
+
+        </div>
+
+      </div>
+  </div>         <!--about company row end-->
+
+
+<div class = "divider"></div>
+
+<section id = "project-section">
+<div class="container">
+
+
+            <div class="divider"></div>
+            <div class="row wow fadeInRight">
+                <div class="col-sm-8 col-sm-offset-2">
+                    <div class="project-heading">
+                        <h2 >How <strong>Heta Works</strong> </h2>
+                        <span class="center-line"></span>
+                        <p >
+                           Heta is like a baby, it takes time to learn and you can teach it new words.   </p>
+                    </div>
+                </div>
+
+              </div>
+               <div class="divider"></div>
+
+</div>
+</section>
+
+<div class = "divider"></div>
+
+<section>
+  <div class="container">
+    <div class="row">
+
+        <div class="col-md-7 features wow fadeInLeftBig">
+
+            <h3>Features</h3>
+              
+
+              <div class="row">
+
+                  <div class="col-md-3 services-icon">
+                    <i class="fa fa-arrows-h" aria-hidden="true"></i>
+                  </div>
+
+                    <div class="col-md-9 services-text">
+                        <h4 class="heading-mini">scalable</h4>
+                        <p>
+                          Heta learns. The more the information, the better. 
+                        </p>
+                    </div>
+
+                </div><!--services list-->
+                  <div class="divide"></div>
+
+              <div class="row">
+
+                  <div class="col-md-3 services-icon">
+                    <i class="fa fa-flag" aria-hidden="true"></i>
+                  </div>
+
+                  <div class="col-md-9 services-text">
+                      <h4 class="heading-mini">Report</h4>
+                      <p>
+                        Uncaught Negative comments can be reported and they get added to dictionary.
+                      </p>
+                  </div>
+
+              </div><!--services list-->
+
+              <div class="divide"></div>
+
+              <div class="row">
+                  <div class="col-md-3 services-icon">
+                      <i class="fa fa-book" aria-hidden="true"></i>
+                  </div>
+
+                  <div class="col-md-9 services-text">
+                    <h4 class="heading-mini">Dictionary</h4>
+                       <p> Heta has a dictiionary where negative words are stored.
+                        </p>
+                  </div>
+              </div><!--services list-->
+
+       </div>
+
+                  <div class="col-md-5 wow fadeInRightBig">
+                     <img src="static/images/ipad.png" class="img-responsive ipad" alt="">
+                  </div>
+    </div>
+
+  </div><!--container-->
+</section><!--features end-->
+
+<div class="divider"></div>
+          
+
+  <div class="divider"></div>
+
+
+                <!-- Start of Support 
+                            Our Cause-->
+                            
+            <section class="support-ourcause">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-8 col-md-offset-2 text-center" >
+                            <h3 class="animated fadeInRightBig">Support Our Cause</h3>
+                            
+                        </div>
+                    </div><!--row-->
+                    
+
+          <!-- Donate now and 
+                                  Share button -->
+                    <div class="row">
+                        <div class="col-sm-4 col-sm-offset-4 text-center" id = "donate-share">
+                            <a href="{{ url_for('donate') }}" class="btn btn-rw btn-primary btn-radius wow fadeInLeftBig">Donate <i class="fa fa-credit-card"></i></a>
+                            <a href="{{ url_for('support') }}"class="btn btn-rw btn-primary btn-radius wow fadeInRightBig" >Share <i class="fa fa-share-alt"></i></a>
+                        </div>
+                    </div>
+          
+          <!-- End of Donate now and 
+                                  Share button -->
+                    
+                </div>
+            </section>
+        
+        <!-- End of Support 
+                            Our Cause-->
+            
+
+{% endblock %}
+   
+            
+             
+                
+                
+   

@@ -1,0 +1,78 @@
+
+{% extends 'base.html' %}
+<!--{% import 'bootstrap/wtf.html' as wtf %}-->
+
+{% block title %}
+    A simple form using WTF
+{% endblock %}
+
+{% block content %}
+
+		<section id="content-region-3" class="padding-40 page-tree-bg">
+            <div class="container">
+                <h3 class="page-tree-text">
+                    Create new account
+                </h3>
+            </div>
+
+        </section><!--page-tree end here-->
+     <div class="divider"></div>
+
+    <div class="container">
+    	 <div class="row wow bounceInDown">
+    	 	<div class="col-md-6 col-md-offset-3">
+    	 		<div class="my-login-form">
+        <!--{{ wtf.quick_form(form) }}-->
+
+        <form action="" method="post" name="login">
+
+	        	{{ form.hidden_tag() }}
+	        <h4 class="heading-mini">Sign up</h4><hr>
+
+	         <div class="row">
+
+	         	<div class="col-md-6 margin-btm-20">
+	         		<p> {{ form.firstName(class="form-control", placeholder="First Name..") }}</p>
+	         	</div>
+
+	         	<div class="col-md-6 margin-btm-20">
+	         		<p>{{ form.lastName(class="form-control", placeholder="Last Name..") }} </p>
+	         	</div>
+
+	         	<div class="col-md-6 margin-btm-20">
+	         		<p>{{ form.email(class="form-control", placeholder="Email Address..") }} </p>
+	         	</div>
+
+	         	<div class="col-md-6 margin-btm-20">
+	         		<p>{{ form.password (class="form-control", placeholder="Password..")}} </p>
+	         	</div>
+
+	         	<div class="col-md-12 text-right">
+	         		<p><input type="submit"  value="Sign Up" class="btn btn-primary btn-rw"></p>
+	         	</div>
+
+	         </div>
+
+	        <!-- <p> {{ form.firstName(size=80) }}<br></p>
+	        <p>{{ form.lastName }} <br></p>
+	        <p>{{ form.email }} <br></p>
+	        <p>{{ form.password }} <br></p>
+	      	<p><input type="submit" value="Sign Up" class="btn btn-primary btn-rw"></p>
+ -->
+  		</form>
+
+        {% if firstName %}
+            <h1>WELCOME TO OUR TEAM{{ firstName}}</h1>
+            <h3>Thank you for signing up, You will get a an invitation to join our developers community to your {{ email }}</h3>
+            <p>your password is: {{password}}</p>
+            
+
+        {% endif %}
+
+        		</div>
+            </div>
+    	</div>
+    </div>
+    <div class="divider"></div>
+
+{% endblock %}

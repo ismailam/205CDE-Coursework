@@ -1,0 +1,166 @@
+
+{% extends 'base.html' %}
+
+
+{% block title %}
+    A simple form using WTF
+{% endblock %}
+
+{% block content %}
+
+		<!--1st Large Banner 
+                map  Wrapper-->
+
+<script src='https://maps.googleapis.com/maps/api/js?v=3.exp'></script>
+<div style='overflow:hidden;height:400px;width:1440px;'><div id='gmap_canvas' style='height:400px;width:1440px;'></div><style>#gmap_canvas img{max-width:none!important;background:none!important}</style></div> <a href='http://maps-website.com/'>embed google maps directions</a> <script type='text/javascript' src='https://embedmaps.com/google-maps-authorization/script.js?id=6e1b257dfd9560bc3b96435dfa1cc3ad1f6e3faa'></script><script type='text/javascript'>function init_map(){var myOptions = {zoom:12,center:new google.maps.LatLng(52.4058994,-1.4959288999999671),mapTypeId: google.maps.MapTypeId.ROADMAP};map = new google.maps.Map(document.getElementById('gmap_canvas'), myOptions);marker = new google.maps.Marker({map: map,position: new google.maps.LatLng(52.4058994,-1.4959288999999671)});infowindow = new google.maps.InfoWindow({content:'<strong>Coventry University</strong><br>Gulson Rd<br> CV1 2JH Coventry<br>'});google.maps.event.addListener(marker, 'click', function(){infowindow.open(map,marker);});infowindow.open(map,marker);}google.maps.event.addDomListener(window, 'load', init_map);
+</script>
+
+   
+     <!-- End of ist large banner
+                     nap wrapper-->
+
+
+                     
+
+     <div class="divider"></div>
+
+    <div class="container">
+         <div class = "row intro-row">
+              
+                
+                      {% if success %}
+
+                <div class="col-md-8 col-md-offset-2 text-center">
+                    <div class="services-box">
+
+                        <h3>Thank you for your message. We'll get back to you shortly.</h3>
+                        <br>
+                        <i class="ion-email"></i>
+                    </div>
+                </div>
+          
+    	 
+    	 	<div class="col-md-8">
+                <div class="contact-form-col">
+                	<h3>Keep in touch with us</h3>
+        <!--{{ wtf.quick_form(form) }}-->
+
+        <form action="" action="{{ url_for('contact') }}" method=post id="contactForm">
+
+	        	{{ form.hidden_tag() }}
+	     
+
+	         <div class="row">
+	         	 <div class="col-md-6">
+	         	 	<div class="row control-group">
+	         	 		<div class="form-group col-sm-12 controls">
+	         	 			<p>  {{ form.name(class="form-control", placeholder="Full Name.." ,id = "name") }}
+	         	 			</p>                                                       
+                        </div>
+                 	</div>
+                 </div>
+
+                 <div class="col-md-6">
+	         	 	<div class="row control-group">
+	         	 		<div class="form-group col-sm-12 controls">
+	         	 			<p> {{ form.email(class="form-control", placeholder="Email Address.." ,id = "email") }}
+	         	 			</p>                                                           
+                        </div>
+                 	</div>
+                 </div>
+
+             </div>
+
+
+             <div class="row control-group">
+             	<div class="form-group col-sm-12  controls">
+             		<p> {{ form.subject(class="form-control", placeholder="Subject..", id="phone") }}</p>  
+                </div>
+             </div>
+
+
+              <div class="row control-group">
+                <div class="form-group col-sm-12 controls">
+                	<p> {{ form.message(class="form-control", placeholder="Please enter a message..", id="message") }}</p>                                                    
+                </div>
+              </div>
+
+
+
+             <div id="success"></div>
+             <div class="row">
+             	<div class="form-group col-sm-12">
+             		<p>{{ form.submit( class="btn btn-primary btn-rw") }}</p>
+                                    
+                </div>
+             </div>
+
+  		</form>
+        {% endif %}
+       </div>
+      </div>
+
+       <div class="col-md-4">
+       		<div class="contact-info">
+       			<div class="media">
+       				<div class="media-left">
+       					<i class="ion-ios-home-outline"></i>
+                    </div>
+
+                    <div class="media-body">
+                    	<p>124, Munna wali street, Jaipur, 302012</p>
+                    </div>
+                            
+                        </div><!--media-->
+                         <div class="media">
+                            <div class="media-left">
+                                <i class="ion-ios-email-outline"></i>
+                            </div>
+
+                            <div class="media-body">
+                                <p>support@assan-medical.com</p>
+                            </div>
+                        </div><!--media-->
+
+                        <div class="media">
+                        	<div class="media-left">
+                                <i class="ion-ios-telephone-outline"></i>
+                            </div>
+
+                            <div class="media-body">
+                                <p>+01 1800 3459 4543</p>
+                            </div>
+
+                        </div><!--media-->
+                        
+                        <div class = "divider30"></div> 
+                        <div class="contact-socialmedia">
+                            <a href="#" class="btn btn-social-icon btn-facebook btn-sm">
+                                <i class="fa fa-facebook"></i>
+                            </a>
+
+                            <a href="#" class="btn btn-social-icon btn-twitter btn-sm">
+                                <i class="fa fa-twitter"></i>
+                            </a>
+
+                            <a href="#" class="btn btn-social-icon btn-instagram btn-sm">
+                                <i class="fa fa-instagram"></i>  
+                            </a>
+
+                            <a href="#" class="btn btn-social-icon btn-google-plus btn-sm">
+                                <i class="fa fa-google-plus"></i> 
+                            </a>
+                            
+                        </div>
+
+                    </div>
+                </div>
+             
+        </div>
+
+
+
+  
+    <div class="divider"></div>
+
+{% endblock %}
